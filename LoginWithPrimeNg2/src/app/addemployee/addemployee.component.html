@@ -1,0 +1,59 @@
+<h1>Add Employee in API</h1>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  
+  <!-- Template variables help you use data from one part of a template in another part of the template. Use template variables to perform tasks such as respond to user input or finely tune your application's forms. -->
+  <!-- use of #template variables --> 
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()"> 
+    
+    <!-- {{employees|json}} -->
+    <hr>
+    <div class="mb-3" >
+      <label for="empnm" class="form-label">Employee Name:</label>
+      <input type="text" class="form-control" id="empid" name="empname" #nm [(ngModel)]="emp1.ename" [ngModelOptions]="{standalone:true}">
+    </div>
+    <div class="mb-3">
+      <label for="empct" class="form-label">Employee City:</label>
+      <input type="text" class="form-control" id="empnm" name="empcity" #ct   [(ngModel)]="emp1.city" [ngModelOptions]="{standalone:true}">
+    </div>
+    <div class="mb-3">
+      <label for="empid" class="form-label">Employee Id:</label>
+      <input type="number" class="form-control" id="empsal" name="employeid" #id  [(ngModel)]="emp1.eid" [ngModelOptions]="{standalone:true}">
+    </div>
+    <div class="mb-3">
+      <label for="empmob" class="form-label">Employee Mobileno:</label>
+      <input type="number" class="form-control" id="empsal" name="empmobile" #mobile  [(ngModel)]="emp1.mobileno" [ngModelOptions]="{standalone:true}">
+    </div>
+    <div class="mb-3">
+      <label for="empsal" class="form-label">Employee Salary:</label>
+      <input type="number" class="form-control" id="empsal" name="empsalary" #sal  [(ngModel)]="emp1.salary" [ngModelOptions]="{standalone:true}">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-space" >submit</button> 
+    <!-- <button type="button" class="btn btn-primary">delete</button> 
+    <button type="button" class="btn btn-primary" routerLink="/addemployee/0">edit</button>-->
+  </form>
+
+<!--   
+<div *ngFor="let emp of employees">
+  <h6>{{emp.ename}}, {{emp.city}}, {{emp.eid}},{{emp.mobileno}},{{emp.salary}}</h6>
+</div> -->
+<hr>
+<table>
+  <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Id</th>
+      <th>Mobileno.</th>
+      <th>Salary</th>
+      <th>Edit</th>
+  </tr>
+  <tr *ngFor="let user of employees">
+      <td>{{user.ename}}</td>
+      <td>{{user.city}}</td>
+      <td>{{user.eid}}</td>
+      <td>{{user.mobileno}}</td>
+      <td>{{user.salary}}</td>
+      <td><button (click)="onEdit(user.eid)" class="btn btn-primary btn-sm">Edit</button></td>
+  </tr>
+</table>
+

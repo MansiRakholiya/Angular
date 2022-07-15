@@ -1,0 +1,27 @@
+<h1>Table Grid Component</h1>
+<!-- {{this.users|json}} -->
+<p-table [value]="users" styleClass="p-datatable-gridlines">
+    <ng-template pTemplate="caption">
+        Header
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Email</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-users>
+        <tr>
+            <td>{{users.userId}}</td>
+            <td>{{users.id}}</td>
+            <td>{{users.title}}</td>
+            <td>{{users.completed}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        Footer
+    </ng-template>
+</p-table>
+
