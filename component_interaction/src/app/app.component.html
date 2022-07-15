@@ -1,0 +1,17 @@
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Parent Component</h3>
+        </div>
+        <div class="card-body">
+            pass data: <input type="text" class="form-control" [(ngModel)]='entername'>
+            <input type="buttton" value="send" (click)="TransferData()" class="btn btn-primary">
+        </div>
+    </div>
+
+</div>
+
+
+<app-child [parentData]="parentData"></app-child>
