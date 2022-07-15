@@ -1,0 +1,18 @@
+<h1>API with Service in Angular</h1>
+ 
+<table>
+    <tr>
+        <th>Name</th>
+        <th>City</th>
+        <th>Id</th>
+        <th>Mobileno.</th>
+        <th>Salary</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.ename}}</td>
+        <td>{{user.city}}</td>
+        <td> {{user.eid}}</td>
+        <td>{{user.mobileno}}</td>
+        <td>{{user.salary}}</td>
+    </tr>
+</table>
