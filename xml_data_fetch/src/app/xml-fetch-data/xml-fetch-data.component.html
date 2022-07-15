@@ -1,0 +1,20 @@
+<p>xml-fetch-data !</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+    <th>identifier</th>
+    <!-- <th>Email</th>
+    <th>Mobile</th> -->
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let i of list;let j=index" [ngClass]="i.class_name">
+    <td>{{i.identifier}}</td>
+    <!-- <td>{{i.email}}</td>
+    <td>{{i.mobile}}</td> -->
+  </tr>
+  </tbody>
+</table>
+<input type="file" (change)="selectfile($event)" />
