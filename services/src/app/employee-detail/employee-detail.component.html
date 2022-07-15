@@ -1,0 +1,38 @@
+<!-- <p>employee-Detail!</p> -->
+
+<html>
+    <head>
+        <title>Student details in formate</title>
+    </head>
+    <body>
+        <h1> Student Information </h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Mobile No:</th>
+                <th>E-Mail</th>
+                <th>DOB</th>
+            </tr>
+            <tr *ngFor="let stud of students">
+                <td>{{stud.id}}</td>
+                <td>{{stud.name}}</td>
+                <td>{{stud.age}}</td>
+                <td>{{stud.address}}</td>
+                <td>{{stud.mo}}</td>
+                <td>{{stud.email}}</td>
+                <td>{{stud.dob}}</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+
+
+<!-- 
+<h2>Employee Details</h2>
+<ul *ngFor="let employee of employees">
+  <li>{{employee.id}}  {{employee.name}}  {{employee.age}}</li>
+</ul> -->

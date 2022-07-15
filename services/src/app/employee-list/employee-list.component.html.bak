@@ -1,0 +1,45 @@
+<!-- <p>employee-list works!</p> -->
+<html>
+    <head>
+        <title>Employee details in formate</title>
+    </head>
+    <body>
+        <h1> Employee Information </h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>Salary</th>
+                <th>Department</th>
+            </tr>
+            <tr *ngFor="let emplopyee of employees">
+                <td>{{emplopyee.empid}}</td>
+                <td>{{emplopyee.empname}}</td>
+                <td>{{emplopyee.empage}}</td>
+                <td>{{emplopyee.empaddress}}</td>
+                <td>{{emplopyee.empsal}}</td>
+                <td>{{emplopyee.empdep}}</td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+
+
+https://www.tutsmake.com/angular-13-display-json-data-in-table-tutorial/
+https://www.knowledgehut.com/blog/web-development/make-api-calls-angular
+https://howtocreateapps.com/angular-tutorial-json/
+https://www.knowledgehut.com/blog/web-development/make-api-calls-angular
+
+youtube :Fetch Data from an API using the HttpClient in Angular | Angular 10 Tutorials in Hindi | Part-42
+
+
+
+
+https://gorest.co.in/public/v2/users/100/posts
+<!-- <h2>Employee list</h2>
+<ul *ngFor="let employee of employees">
+  <li>{{employee.name}}</li>
+</ul> -->
